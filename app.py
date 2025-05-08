@@ -14,7 +14,8 @@ def raw_code():
         return "error: no username provided"
     github_url = f"https://github.com/{username}"
     response = requests.get(github_url)
-    return response.text[:5000]
+    text = response.text[:800]
+    return f"<p style=color:blue>{text}</p>"
 
 @app.route('/api/github-stats')
 def github_stats():
@@ -25,4 +26,4 @@ def github_stats():
     github_api_url = f"https://api.github.com/users/{username}"
     response = requests.get(github_api_url)
     
-    return response.text[:5000]
+    return response.text[:1000]
