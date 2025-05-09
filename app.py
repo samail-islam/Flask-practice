@@ -39,14 +39,17 @@ def svg():
     if not avatar_url:
         pass
     return Response(
-        render_template("card.svg", 
-                        name,
-                        login,
-                        public_repos,
-                        followers,
-                        following,
-                        avatar_url,
-        mimetype="image/svg+xml"))
+        render_template('card.svg',
+                        name = name,
+                        login = login,
+                        following = following,
+                        followers = followers,
+                        public_repos = public_repos, 
+                        avatar_url = avatar_url
+                       ),
+        mimetype="image/svg+xml"
+    )
+
     
 
 @app.route('/api/github-stats')
