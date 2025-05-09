@@ -16,7 +16,7 @@ def raw_code():
         github_url = f"https://github.com/{username}"
         response = requests.get(github_url)
         text = response.text[:800]
-        return f"<p style=color:blue>This is {username}</p>"
+        return f"<p style=color:blue>This is {text}</p>"
 
 @app.route('/api/github-stats')
 def github_stats():
