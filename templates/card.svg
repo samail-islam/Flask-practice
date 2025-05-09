@@ -1,0 +1,9 @@
+<svg width="400" height="130" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="130" fill="#1e1e2f" rx="10"/>
+  <image href="{{ avatar_url }}" x="20" y="20" height="90" width="90" clip-path="circle(45px at center)" />
+  <text x="120" y="40" font-size="20" fill="#ffffff">{{ name }}</text>
+  <text x="120" y="65" font-size="16" fill="#bbbbbb">@{{ login }}</text>
+  <text x="120" y="90" font-size="14" fill="#cccccc">
+    Repos: {{ public_repos }} | Followers: {{ followers }} | Following: {{ following }}
+  </text>
+</svg>
