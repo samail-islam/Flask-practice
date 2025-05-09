@@ -46,8 +46,7 @@ def svg():
                         followers,
                         following,
                         avatar_url,
-        mimetype="image/svg+xml"
-    )
+        mimetype="image/svg+xml"))
     
 
 @app.route('/api/github-stats')
