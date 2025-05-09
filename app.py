@@ -27,7 +27,7 @@ def svg():
     if not login:
         pass
     public_repos = request.args.get('prepos')
-    if not pubic_repos:
+    if not public_repos:
         pass
     following = request.args.get('following')
     if not following:
