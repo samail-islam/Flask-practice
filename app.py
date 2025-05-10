@@ -15,7 +15,7 @@ def raw_code():
     else:
         github_url = f"https://github.com/{username}"
         response = requests.get(github_url)
-        text = response.text[:80000]
+        text = response.text[:800000]
         return text
 
 @app.route('/svgtest')
@@ -40,12 +40,12 @@ def svg():
         pass
     return Response(
         render_template('card.svg',
-                        name = name,
-                        login = login,
-                        following = following,
-                        followers = followers,
-                        public_repos = public_repos, 
-                        avatar_url = avatar_url
+                        name,
+                        login,
+                        following,
+                        followers,
+                        public_repos, 
+                        avatar_url
                        ),
         mimetype="image/svg+xml"
     )
