@@ -25,3 +25,8 @@ def github_stats():
     </div>
     """
     return Response(html_card, mimetype='text/html')
+@app.route('/codes')
+def test():
+codename = request.args.get('code')
+
+
