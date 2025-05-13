@@ -3,6 +3,16 @@ import requests
 
 app = Flask(__name__)
 
+@app.route('/codes')
+def codes():
+    codename = request.args.get('code')
+    if codename == 'calculator':
+        return """
+        num1 = input('Enter num1 ')
+        num2 = input('Enter num2 ')
+        print(num1+num2)
+        
+        """
 @app.route('/api/github-stats')
 def github_stats():
     username = request.args.get('username')
@@ -25,8 +35,3 @@ def github_stats():
     </div>
     """
     return Response(html_card, mimetype='text/html')
-@app.route('/codes')
-def test():
-codename = request.args.get('code')
-
-
